@@ -20,6 +20,7 @@ const Modal = (props: ModalComponentProps) => {
     modalName,
     title,
     description,
+    className,
     confirmButtonText,
     cancelButtonText,
     body,
@@ -30,7 +31,7 @@ const Modal = (props: ModalComponentProps) => {
   } = props;
   return (
     <Credenza open={activeModal === modalName} onOpenChange={closeModal}>
-      <CredenzaContent>
+      <CredenzaContent className={className}>
         <CredenzaHeader>
           <CredenzaTitle>{title}</CredenzaTitle>
           <CredenzaDescription>{description}</CredenzaDescription>
